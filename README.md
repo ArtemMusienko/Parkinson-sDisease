@@ -21,7 +21,7 @@
     df = pd.read_csv("./parkinsons.data")
     df.info()
     df.head()
-Перед разработкой основной части задания следует ознакомиться с описанием признаков и меток датасета, скачав файл по ссылке: [https://storage.yandexcloud.net/academy.ai/practica/parkinsons.names](https://www.google.com/url?q=https%3A%2F%2Fstorage.yandexcloud.net%2Facademy.ai%2Fpractica%2Fparkinsons.names)
+Перед разработкой основной части задания следует ознакомиться с описанием признаков и меток датасета, скачав файл по [ссылке](https://www.google.com/url?q=https%3A%2F%2Fstorage.yandexcloud.net%2Facademy.ai%2Fpractica%2Fparkinsons.names).
 Получим объекты и метки из датафрейма. Объектами являются все столбцы, **кроме** "**status**", а метки - те, что находятся в столбце **‘status’**.
 
     features=df.loc[:,df.columns!='status'].values[:,1:]  #все столбцы, кроме "status"
