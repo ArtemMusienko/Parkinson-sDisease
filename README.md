@@ -4,6 +4,8 @@
 
 **Основная задача** -  предсказать заболевание *Паркинсона* на ранней стадии, используя алгоритм машинного обучения  **XGBoost**  и библиотеку  **sklearn**  для нормализации признаков.
 
+**XGBoost (eXtreme Gradient Boosting)** — это мощный и широко используемый алгоритм машинного обучения, основанный на методе **градиентного бустинга деревьев решений**. Он известен своей скоростью, производительностью и высокой точностью, особенно в задачах структурированных/табличных данных.
+
 Скачаем файл [parkinsons.data](https://storage.yandexcloud.net/academy.ai/practica/parkinsons.data):
 
     url  =  'https://storage.yandexcloud.net/academy.ai/practica/parkinsons.data'
@@ -16,7 +18,8 @@
     import seaborn as sns
     import matplotlib.pyplot as plt
     from xgboost import XGBClassifier
-    from sklearn.metrics import accuracy_score, confusion_matrix, classification_report, roc_auc_score
+    from sklearn.metrics import accuracy_score, confusion_matrix, 
+								classification_report, roc_auc_score
     from sklearn.preprocessing import MinMaxScaler
     from sklearn.model_selection import train_test_split
     
@@ -57,3 +60,5 @@
 
     y_pred = model.predict(x_test)  #выполнение предсказания на тестовых данных
     print(accuracy_score(y_test, y_pred) * 100)  #точность модели
+
+> Для запуска кода необязательно использовать графический ускоритель T4.
